@@ -748,110 +748,132 @@ class Ui_Unos_Izdatci(object):
             self.comboBox2.setItemText(0, "Arhiđ. ili Dek.")
 
     def unos(self):
-        lista = [0, 1, 4, 8, 9, 10,
-                 11, 14, 15, 17, 18, 19]
+        lista = [1, 2, 12, 13, 14,
+                 15]
         value = (self.lineEdit.text())
-        for i in range(0, 12):
+        for i in range(0, 6):
             if self.comboBox.currentIndex() == lista[i]:
-                f = open("Unos_Prihodi_QB", "r")
+                f = open("Unos_Izdatci_QB", "r")
                 pisanje = f.readlines()
                 value = float(value) + float(pisanje[i])
                 pisanje[i] = str(value) + "\n"
                 f.close()
-                f = open("Unos_Prihodi_QB", "w")
+                f = open("Unos_Izdatci_QB", "w")
                 f.writelines(pisanje)
                 f.close()
-        if self.comboBox.currentIndex() == 2:
-            for i in range(0, 3):
+        if self.comboBox.currentIndex() == 0:
+            for i in range(0, 2):
                 if self.comboBox2.currentIndex() == i:
-                    f = open("Unos_Prihodi_QB2", "r")
+                    f = open("Unos_Izdatci_QB2", "r")
                     pisanje = f.readlines()
                     value = float(value) + float(pisanje[i])
                     pisanje[i] = str(value) + "\n"
                     f.close()
-                    f = open("Unos_Prihodi_QB2", "w")
+                    f = open("Unos_Izdatci_QB2", "w")
                     f.writelines(pisanje)
                     f.close()
         if self.comboBox.currentIndex() == 3:
-            for i in range(3, 5):
-                if self.comboBox2.currentIndex() == i-3:
-                    f = open("Unos_Prihodi_QB2", "r")
+            for i in range(2, 6):
+                if self.comboBox2.currentIndex() == i-2:
+                    f = open("Unos_Izdatci_QB2", "r")
                     pisanje = f.readlines()
                     value = float(value) + float(pisanje[i])
                     pisanje[i] = str(value) + "\n"
                     f.close()
-                    f = open("Unos_Prihodi_QB2", "w")
+                    f = open("Unos_Izdatci_QB2", "w")
+                    f.writelines(pisanje)
+                    f.close()
+        if self.comboBox.currentIndex() == 4:
+            for i in range(6, 10):
+                if self.comboBox2.currentIndex() == i-6:
+                    f = open("Unos_Izdatci_QB2", "r")
+                    pisanje = f.readlines()
+                    value = float(value) + float(pisanje[i])
+                    pisanje[i] = str(value) + "\n"
+                    f.close()
+                    f = open("Unos_Izdatci_QB2", "w")
                     f.writelines(pisanje)
                     f.close()
         if self.comboBox.currentIndex() == 5:
-            for i in range(5, 9):
-                if self.comboBox2.currentIndex() == i-5:
-                    f = open("Unos_Prihodi_QB2", "r")
+            for i in range(10, 17):
+                if self.comboBox2.currentIndex() == i-10:
+                    f = open("Unos_Izdatci_QB2", "r")
                     pisanje = f.readlines()
                     value = float(value) + float(pisanje[i])
                     pisanje[i] = str(value) + "\n"
                     f.close()
-                    f = open("Unos_Prihodi_QB2", "w")
+                    f = open("Unos_Izdatci_QB2", "w")
                     f.writelines(pisanje)
                     f.close()
         if self.comboBox.currentIndex() == 6:
-            for i in range(9, 13):
-                if self.comboBox2.currentIndex() == i-9:
-                    f = open("Unos_Prihodi_QB2", "r")
+            for i in range(17, 25):
+                if self.comboBox2.currentIndex() == i-17:
+                    f = open("Unos_Izdatci_QB2", "r")
                     pisanje = f.readlines()
                     value = float(value) + float(pisanje[i])
                     pisanje[i] = str(value) + "\n"
                     f.close()
-                    f = open("Unos_Prihodi_QB2", "w")
+                    f = open("Unos_Izdatci_QB2", "w")
                     f.writelines(pisanje)
                     f.close()
         if self.comboBox.currentIndex() == 7:
-            for i in range(13, 14):
-                if self.comboBox2.currentIndex() == i-13:
-                    f = open("Unos_Prihodi_QB2", "r")
+            for i in range(25, 29):
+                if self.comboBox2.currentIndex() == i-25:
+                    f = open("Unos_Izdatci_QB2", "r")
                     pisanje = f.readlines()
                     value = float(value) + float(pisanje[i])
                     pisanje[i] = str(value) + "\n"
                     f.close()
-                    f = open("Unos_Prihodi_QB2", "w")
+                    f = open("Unos_Izdatci_QB2", "w")
                     f.writelines(pisanje)
                     f.close()
-        if self.comboBox.currentIndex() == 12:
-            for i in range(14, 18):
-                if self.comboBox2.currentIndex() == i-14:
-                    f = open("Unos_Prihodi_QB2", "r")
+        if self.comboBox.currentIndex() == 8:
+            for i in range(29, 32):
+                if self.comboBox2.currentIndex() == i-29:
+                    f = open("Unos_Izdatci_QB2", "r")
                     pisanje = f.readlines()
                     value = float(value) + float(pisanje[i])
                     pisanje[i] = str(value) + "\n"
                     f.close()
-                    f = open("Unos_Prihodi_QB2", "w")
+                    f = open("Unos_Izdatci_QB2", "w")
                     f.writelines(pisanje)
                     f.close()
-        if self.comboBox.currentIndex() == 13:
-            for i in range(18, 22):
-                if self.comboBox2.currentIndex() == i-18:
-                    f = open("Unos_Prihodi_QB2", "r")
+        if self.comboBox.currentIndex() == 9:
+            for i in range(32, 34):
+                if self.comboBox2.currentIndex() == i-32:
+                    f = open("Unos_Izdatci_QB2", "r")
                     pisanje = f.readlines()
                     value = float(value) + float(pisanje[i])
                     pisanje[i] = str(value) + "\n"
                     f.close()
-                    f = open("Unos_Prihodi_QB2", "w")
+                    f = open("Unos_Izdatci_QB2", "w")
                     f.writelines(pisanje)
                     f.close()
-        if self.comboBox.currentIndex() == 16:
-            for i in range(22, 24):
-                if self.comboBox2.currentIndex() == i-22:
-                    f = open("Unos_Prihodi_QB2", "r")
+        if self.comboBox.currentIndex() == 10:
+            for i in range(34, 45):
+                if self.comboBox2.currentIndex() == i-34:
+                    f = open("Unos_Izdatci_QB2", "r")
                     pisanje = f.readlines()
                     value = float(value) + float(pisanje[i])
                     pisanje[i] = str(value) + "\n"
                     f.close()
-                    f = open("Unos_Prihodi_QB2", "w")
+                    f = open("Unos_Izdatci_QB2", "w")
+                    f.writelines(pisanje)
+                    f.close()
+        if self.comboBox.currentIndex() == 11:
+            for i in range(45, 46):
+                if self.comboBox2.currentIndex() == i-45:
+                    f = open("Unos_Izdatci_QB2", "r")
+                    pisanje = f.readlines()
+                    value = float(value) + float(pisanje[i])
+                    pisanje[i] = str(value) + "\n"
+                    f.close()
+                    f = open("Unos_Izdatci_QB2", "w")
                     f.writelines(pisanje)
                     f.close()
 
     def reset(self):
-        for i in range(0, 12):
+        for i in range(0, 6):
             f = open("Unos_Izdatci_QB", "r")
             pisanje = f.readlines()
             pisanje[i] = "0.00\n"
@@ -859,7 +881,7 @@ class Ui_Unos_Izdatci(object):
             f = open("Unos_Izdatci_QB", "w")
             f.writelines(pisanje)
             f.close()
-        for i in range(0, 24):
+        for i in range(0, 46):
             f = open("Unos_Izdatci_QB2", "r")
             pisanje = f.readlines()
             pisanje[i] = "0.00\n"
